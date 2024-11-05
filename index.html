@@ -9,6 +9,8 @@
 
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- MY CSS  -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -43,7 +45,7 @@
     <section class="jumbotron text-center">
       <img src="img/fadhil.JPG" alt="Gambar Profil" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Fadhil Achlus Suffah</h1>
-      <p class="lead">Freelance | Programmer</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -62,8 +64,13 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis est vero aliquid deserunt quaerat hic atque harum recusandae similique quidem?</p></div>
-          <div class="col-md-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore natus fuga maxime ullam ipsum voluptate similique officiis tempore soluta, quidem commodi sed minima deleniti quaerat.</p></div>
+          <div class="col-md-8" data-aos="fade-up" data-aos-duration="1000">
+            <p>
+              A graduate in Information Systems from Dinamika Bangsa University, skilled in Microsoft Office, Excel, PowerPoint, CSS, HTML, Laravel, and SQL. Known for attention to detail, analytical thinking, and a commitment to delivering
+              exceptional results in every project. Along with technical expertise, brings a strong sense of responsibility, discipline, and proactive attitude, making for a reliable and effective team player. Eager to apply these strengths
+              to new challenges and contribute meaningfully to the team by delivering efficient, high-quality solutions and driving continuous improvement.
+            </p>
+          </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -85,7 +92,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="img/projects/1.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -93,7 +100,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
               <img src="img/projects/2.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -101,7 +108,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="img/projects/3.jpg" class="card-img-top" alt="Project 3" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -109,7 +116,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
               <img src="img/projects/4.jpg" class="card-img-top" alt="Project 4" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -117,7 +124,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
               <img src="img/projects/5.jpg" class="card-img-top" alt="Project 5" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -135,6 +142,9 @@
       </svg>
     </section>
     <!-- Akhir PROJECT -->
+    <!-- GALLERY -->
+
+    <!-- Akhir GALLERY -->
     <!-- CONTACT -->
     <section id="contact">
       <div class="container">
@@ -186,6 +196,25 @@
     </footer>
     <!-- Akhir FOOTER -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 400,
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', { duration: 1.5, delay: 1, text: 'Freelance | Programmer' });
+      gsap.from('.jumbotron img', { duration: 1.5, y: -100, opacity: 0, ease: 'power4', delay: 0.5 });
+      gsap.from('.navbar', { duration: 1, y: -100, opacity: 0 });
+      gsap.from('.display-4', { duration: 1, y: -100, opacity: 0, delay: 0.5 });
+    </script>
+
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycby_VS3PoU9oehXQLS12XqkQye3P7VXSAekANpyQqzYIzNgOY9C3IpK4VqNE_0OKBR3F5Q/exec';
       const form = document.forms['wpu-contact-form'];
